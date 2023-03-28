@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블럭,인라인</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .one {
+            background-color: lightgray;
+            width: 300px;
+            height: 300px;
+        }
+
+        .inline {
+            background-color: lightskyblue;
+            width: 300px;
+            height: 300px;
+        }
+
+        .two {
+            border: 1px solid red;
+        }
+
+        .two span {
+            background-color: lightgreen;
+        }
+
+        .three span {
+            display: inline-block;
+            background-color: lightpink;
+            width: 150px;
+            height: 30px;
+        }
+
+        .inlineBlock img {
+            width: 200px;
+        }
+
+        .inlineBlock button {
+            width: 100px;
+        }
+
+        p a {
+            background-color: lightsalmon;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one">block요소</div>
+    <span class="inline">inline요소</span>
+
+    <div class="two">블럭요소안에 <span>인라인요소를</span> 적용합니다.</div>
+
+    <div class="three">블럭요소안에 <span>인라인요소를</span> 적용합니다.</div>
+
+    <div>
+        <!-- 잘안씀... 거의 안씀... -->
+        <h4>위첨자 태그</h4>
+        <p>2<sup>n</sup></p>
+        <h4>아래첨자 태그</h4>
+        <p>H<sub>2</sub>O</p>
+    </div>
+
+    <div>
+        <!-- 제일 많이 쓰는 인라인요소 -->
+        <h4>인라인요소 소개</h4>
+        <p>글자의 <b>굵기</b></p>
+        <p>글자의 <strong>굵기(중요한 내용임을 명시)</strong></p>
+        <hr> <!-- 밑에 선 -->
+        <p>기울일체 글자를 <i>기울림</i></p>
+        <p>기울일체 글자를 <em>기울림(중요한 내용임을 명시)</em></p>
+        <p><a href="https://www.naver.com/" target="_blank">링크연결</a></p>
+        <!-- target="_blank" 원래 페이지는 그대로 두고 새로운 페이지를 엶 </div> -->
+
+        <div class="inlineBlock">
+            <!-- 인라인 요소인데 넓이를 인식함 -->
+            <h4>인라인요소 중 공간을 인식함</h4>
+            <img src="https://blog.kakaocdn.net/dn/omYbe/btr0w2qYVeW/KhwRdVXTH4oAiKqSbQLN10/img.png" alt="">
+            <br> <!-- 강제로 엔터친 효과 -->
+            <button>클릭</button>
+        </div>
+</body>
+
+</html>

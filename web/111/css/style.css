@@ -175,8 +175,14 @@ a{
     width: 100%;
 }
 
-#content2{}
-#content2 h2{}
+#content2{
+    margin-top: 15px;
+}
+
+#content2 h2{
+    margin-bottom: 10px;
+}
+
 #content2 ul{}
 #content2 ul li{
     width: 24.25%;
@@ -188,20 +194,68 @@ a{
     margin-right: 0;
 }
 
-#content2 ul li div{}
+#content2 ul li div{
+    overflow: hidden;
+}
+
 #content2 ul li div img{
     width: 100%;
+    transition: 0.3s;
 }
+
+#content2 ul li div:hover img{
+    /* transform: scale(1); ---> 100% */
+    transform: scale(1.2);
+}
+
 #content2 ul li span{}
 
+#footer{
+    border-top: 1px solid #ccc ;
+    padding: 30px 0;
+    margin-top: 30px;
+}
 
+#footer address{
+    /* address태그는 태생적으로 기울림(italic)---> 일반(font-style: nlmal;) */
+    font-style: normal;
+}
+#footer address ul{
+    width: 673px;
+}
 
+#footer address ul li{
+    display: inline;
 
+   /*  display
+    1) display : none
+    2) display : block
+    3) display : inline --> 공간을 인식못함. padding, margin의 상하가 적용안됨
+    3) display : inline-block --> 인라인요소이나 블럭요소처럼 공간을 인식함 */
 
+    position: relative;
+    padding: 0 15px 0 10px;
+}
 
+#footer address ul li::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 4px;
+    width: 1px;
+    height: 13px;
+    background-color: #666;
+}
 
+#footer address ul li.left{
+    padding-left: 0;
+}
 
-
+#footer address p{
+    padding-top: 30px;
+    text-transform: uppercase;
+    /* padding-left: 10px; */
+}
 
 
 

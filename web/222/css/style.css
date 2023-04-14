@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+*{margin: 0; padding: 0;}
+
+/* raset */
+li{
+    list-style: none;  /* 블릿기호삭제 */
+}
+
+a{
+    text-decoration: none; /* 밑줄뺴기 */
+    color: #333;
+}
+
+.clearfix::after{content: ""; clear: both; display: block;}
+
+/* wrap */
+
+#wrap{
+    width: 1000px;
+    margin: 0 auto;
+
+}
+
+#wrap #header{
+
+}
+
+#wrap #header h1{
+    float: left;
+    width: 110px;
+    padding: 15px 0 0;
+}
+
+#wrap #header h1 a{}
+
+#wrap #header h1 a img{
+
+    /* 인라인 요소는 공간을 인식하지 못함
+    width: 200px 값을 줘서 적용되지 않음
+    그런데 인라인 요소이면서 공간을 인식하는 요소가 있음
+    1. img
+    2. button */
+
+    width: 100%;
+}
+
+#wrap #header nav{
+    float: right;
+    background-color: #ddd;
+}
+
+#wrap #header nav ul{}
+
+#wrap #header nav ul li{
+    position: relative;
+    float: left;
+    width: 140px;
+    text-align: center;
+    /* 나의 자식 중에서 inline 요소가 있거든 가운데로 정렬하라 */
+}
+
+#wrap #header nav ul li a{
+    display: block;
+    padding: 24px 20px 20px;
+    transition: 0.3s;
+}
+
+#wrap #header nav ul li a:hover{
+    background-color: #ccc;
+}
+
+#wrap #header .nav ul li .submenu{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 65px;
+}
+#wrap #header .nav ul li .submenu li{
+
+}
+
+#wrap #header .nav ul li .submenu li a{
+    background-color: #888;
+    padding: 10px;
+    color: #fff;
+}
+
+#wrap #header .nav ul li .submenu li a:hover{
+    background-color: #666;
+}
